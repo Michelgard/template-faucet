@@ -1,0 +1,92 @@
+div span.gauche {
+  float: left;
+}
+div span.droite {
+  float: right;
+}
+div.centrage {
+    text-align: center;
+}
+
+body{
+    padding-top: 70px; 
+}
+
+.logo{
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    float: left;  
+    font-size: 35px;
+}
+
+div span.balance {
+  font-size: 20px;
+}
+
+div span.monnaie {
+  font-size: 25px;   
+}
+
+div.textecss {
+  font-size: 20px;
+}
+
+.spanfooter{
+    float: right;
+    font-size: 30px;
+}
+
+.btn-claim{
+    border-radius : 20px;
+    width : 380px;
+    max-width : 100%;
+    border : none;
+    cursor : pointer;
+    color : #000000;
+    background-color :#ffffff;
+    font-size : 15px;
+    text-decoration :none;
+    display : inline-block;
+    outline : none;
+    transition : 0.5s;
+    
+}
+
+.inputwallet {
+    border: none;
+    color: #000000;
+    background-color :#ffffff;
+    width: 350px;
+    height: 36px;
+    font-size: 16px;
+    border-radius: 10px;
+    outline: none;
+    display : inline-block;
+    text-decoration :none;
+    text-align: center;
+}
+
+.referal {
+    border: none;
+    color: #000000;
+    background-color :#ffffff;
+    width: 600px;
+    height: 36px;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+    display : inline-block;
+    text-decoration :none;
+    padding-left : 20px;
+    text-align: center;
+}
+
+.retourclaim{
+    font-size: 24px;
+}
+
+.alert-success {
+    background-color: #79d281;
+    color: #000000;
+}

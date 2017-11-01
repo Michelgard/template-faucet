@@ -16,7 +16,19 @@
             <section class="row">
                 <center>
                     <div class="col-12">
-                        <div id="acwidget"></div>
+                        <div class="radiocaptcha">
+                            <span>Geetest </span><?=form_radio(array('class'=>'captcha', 'name'=>'captcha', 'id' => 'captcha1', 'value'=>'geetest', 'checked'=>TRUE));?>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <span> SolveMedia </span> <?=form_radio(array('class'=>'captcha', 'name'=>'captcha',  'id' => 'captcha2', 'value'=>'solvemedia', 'checked'=>FALSE));?>
+                        </div>
+                        <div class="solvemedia">
+                            <div id="acwidget"></div>
+                        </div>
+                        <div class="geetest">
+                            <div id="embed-captcha"></div>
+                            <p id="wait" class="show">Loading verification code ...</p>
+                            <p id="notice" class="hide">Please complete the verification first</p>
+                        </div>
                     </div>
                 </center>
             </section>

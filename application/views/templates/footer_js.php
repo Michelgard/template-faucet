@@ -1,5 +1,6 @@
 <script src="<?= js_url('jquery-3.2.1.min') ?>" type="text/javascript"></script>    
 <script src="<?= js_url('bootstrap.min') ?>" type="text/javascript"></script>
+<script src="<?= js_url('gt') ?>"></script>
 
 
 <script type="application/javascript">
@@ -34,7 +35,8 @@
                     }else{
                         $('#modalClaim').modal("show");
                         $('#modalClaim').on('shown.bs.modal', function () {
-                             ACPuzzle.create('<?=$param_solve_media_Challenge_Key ?>', 'acwidget', { lang: 'en', size: 'standard' }); 
+                            ACPuzzle.create('<?=$param_solve_media_Challenge_Key ?>', 'acwidget', { lang: 'en', size: 'standard' }); 
+                            
                         });
                         return false;
                     }
@@ -51,6 +53,10 @@
             'response': ACPuzzle.get_response(),
             'remoteip': "<?=$param_ip_serveur ?>",
             'wallet'  : $('.inputwallet').val(),
+            'captcha' : $('.captcha:checked').val(),
+            'geetest_challenge' : $('.geetest_challenge').val(),
+            'geetest_validate' : $('.geetest_validate').val(),
+            'geetest_seccode' : $('.geetest_seccode').val(),
             'ajax'    : '1'
             }; 
             $.ajax({
@@ -79,7 +85,7 @@
                     }else{
                         $('#modalClaim').modal("hide");
                         $('#modalClaimRetour').modal("show");
-                        $("#retourclaim").html(resultData.substring(1, resultData.length));
+                        $("#retourclaim").html(resultData.substring(1, resultData.length)); 
                         setTimeout(function(){
                              $('#modalClaimRetour').modal("hide");
                         }, 5000);
@@ -129,8 +135,10 @@
 		//Affichage selon l'id
         if (rheures > 0){
             $('.btn-claim').val( rheures + ":" + rminutes + ":" + rsecondes);
+            $('title').first().text(rheures + ":" + rminutes + ":" + rsecondes + "  <?=$param_nom_site ?>");
         }else{
             $('.btn-claim').val( + rminutes + ":" + rsecondes);
+            $('title').first().text(rminutes + ":" + rsecondes + "  <?=$param_nom_site ?>");
         }
 		
 		//Reactualisation du chrono si different de 0.
@@ -144,6 +152,100 @@
 			parent.location.replace('<?=$param_URL ?>');
 		}		
     }
+    $(document).ready(function() {
+        var handlerEmbed = function (captchaObj) {
+            $("#embed-submit").click(function (e) {
+                var validate = captchaObj.getValidate();
+                if (!validate) {
+                    $("#notice")[0].className = "show";
+                    setTimeout(function () {
+                        $("#notice")[0].className = "hide";
+                    }, 2000);
+                    e.preventDefault();
+                }
+            });
+            captchaObj.appendTo("#embed-captcha");
+            captchaObj.onReady(function () {
+                $("#wait")[0].className = "hide";
+            });
+        };
+        $.ajax({
+            url: "<?php echo site_url('ajax_geetest');?>?t=" + (new Date()).getTime(), 
+            type: "get",
+            dataType: "json",
+            success: function (data) { 
+                initGeetest({
+                    gt: data.gt,
+                    lang: 'en',
+                    challenge: data.challenge,
+                    new_captcha: data.new_captcha,
+                    product: "embed", 
+                    offline: !data.success 
+                }, handlerEmbed);
+            }
+        });
+    });
+    $(document).ready(function() {
+        if (<?=$param_solve_media_enable?> == 0 && <?=$param_geetest_enable?> == 0){
+            $('.radiocaptcha').hide();
+            $('.geetest').hide();
+            $('.solvemedia').hide();
+        }else{
+            if (<?=$param_solve_media_enable?> == 0 || <?=$param_geetest_enable?> == 0){
+                $('.radiocaptcha').hide();
+                if(<?=$param_solve_media_enable?> == 1){
+                    $('.geetest').hide();
+                    $('.solvemedia').show();
+                };
+                if(<?=$param_geetest_enable?> == 1){
+                    $('.geetest').show();
+                    $('.solvemedia').hide();
+                };
+            }else{
+                if(<?=$modelCaptcha?>==0 | <?=$modelCaptcha?>==1){
+                    $('.geetest').show();
+                    $('.solvemedia').hide();
+                    $('#captcha1').attr('checked', true);
+                }else{
+                    $('.geetest').hide();
+                    $('.solvemedia').show();
+                    $('#captcha2').attr('checked', true);
+                };
+                $('.captcha').change(function() {      
+                    if($('.captcha:checked').val()=='geetest'){
+                        $('.geetest').show();
+                        $('.solvemedia').hide();
+                        
+                        var form_data = {
+                            wallet  : $('.inputwallet').val(),
+                            ajax    : '1'
+                         };
+                        $.ajax({
+                            url: "<?php echo site_url('ajax_captcha'); ?>",
+                            type: 'POST',
+                            async : false,
+                            data: form_data
+                        });
+                    }else{
+                        $('.geetest').hide();
+                        $('.solvemedia').show();
+                        
+                        var form_data = {
+                            wallet  : $('.inputwallet').val(),
+                            ajax    : '2'
+                         };
+                        $.ajax({
+                            url: "<?php echo site_url('ajax_captcha'); ?>",
+                            type: 'POST',
+                            async : false,
+                            data: form_data
+                        });
+                    };
+                });
+            };
+        };
+    });
+
 </script>
 
 <?=$JS_before_close_body ?>

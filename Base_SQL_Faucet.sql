@@ -159,7 +159,13 @@ INSERT INTO `param` (`ID`, `Nom`, `Valeur`) VALUES
 (10, 'param_solve_media_Verification_Key', 'solve_media_Verification_Key'),
 (11, 'param_solve_media_Authentication_Hash_Key', 'solve_media_Authentication_Hash_Key'),
 (12, 'param_ip_serveur', 'Ip du serveur'),
-(13, 'param_theme', 'Darkly');
+(13, 'param_theme', 'Darkly'),
+(14, 'param_solve_media_enable', '0'),
+(15, 'param_geetest_enable', '0'),
+(16, 'param_geetest_captcha_id', 'Captcha ID Geetest'),
+(17, 'param_geetest_private_key', 'Private_key Geetest'),
+(18, 'param_IPHub', 'Key API IPHub.info'),
+(19, 'param_IPHub_enable', '0');
 
 -- --------------------------------------------------------
 
@@ -228,6 +234,7 @@ CREATE TABLE `users` (
   `Creation_date` int(11) NOT NULL,
   `Last_login` int(11) NOT NULL,
   `Active` tinyint(1) NOT NULL DEFAULT '1',
+  `Captcha` int(11) NOT NULL DEFAULT '0',
   `Referal` varchar(255) COLLATE utf8_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 

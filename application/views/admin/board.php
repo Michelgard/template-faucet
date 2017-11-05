@@ -11,6 +11,15 @@
                         <i class="ion ion-person-add"></i>
                     </div>
                 </div>
+                 <div class="small-box bg-green">
+                    <div class="inner">
+                        <h3><?=$userTotal?></h3>
+                        <p>Number users</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-person-add"></i>
+                    </div>
+                </div>
             </div>
             
             <div class="col-md-3">
@@ -18,6 +27,15 @@
                     <div class="inner">
                         <h3><?=$claimTotal?></h3>
                         <p>All Satoshi paid</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-social-bitcoin"></i>
+                    </div>
+                </div>
+                 <div class="small-box bg-aqua">
+                    <div class="inner">
+                        <h3><?=$claimTotal24h?></h3>
+                        <p>Satoshi paid today (/24h)</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-social-bitcoin"></i>
@@ -35,34 +53,6 @@
                         <i class="ion ion-stats-bars"></i>
                     </div>
                 </div> 
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="small-box bg-green">
-                    <div class="inner">
-                        <h3><?=$userTotal?></h3>
-                        <p>Number users</p>
-                    </div>
-                    <div class="icon">
-                        <i class="ion ion-person-add"></i>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-3">
-                <div class="small-box bg-aqua">
-                    <div class="inner">
-                        <h3><?=$claimTotal24h?></h3>
-                        <p>Satoshi paid today (/24h)</p>
-                    </div>
-                    <div class="icon">
-                        <i class="ion ion-social-bitcoin"></i>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-3">
                 <div class="small-box bg-purple">
                     <div class="inner">
                         <h3><?=$claimNb24h?></h3>
@@ -73,6 +63,28 @@
                     </div>
                 </div>
             </div>
+             <div class="col-md-3">
+                <div class="small-box bg-red">
+                  <div class="inner">
+                    <h3><?=$userNoActif?></h3>
+                    <p>User(s) banned</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-close-circled"></i>
+                  </div>
+                </div>
+                  <div class="small-box bg-red">
+                  <div class="inner">
+                    <h3><?=$ipBan?></h3>
+                    <p>Ip banned</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-close-circled"></i>
+                  </div>
+                </div>
+        </div>
+        </div>
+        
             
         <div class="row">
             <div class="col-md-6">

@@ -17,6 +17,11 @@
                                 <?=$iconeMenu?>
                             </a>
                         </li>
+                        <li>
+                            <a href="https://www.blog-de-michel.fr" target="_blanck" class="dropdown-toggle" >
+                                Faucet CMS V0.6.2 by BlogdeMichel
+                            </a>
+                        </li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">

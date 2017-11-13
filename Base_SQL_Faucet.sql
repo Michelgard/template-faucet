@@ -128,7 +128,8 @@ INSERT INTO `monnaies` (`ID`, `Nom`, `Nom_Complet`, `Cent`) VALUES
 (6, 'BLK', 'Blackcoin', 'Satoshi'),
 (7, 'DASH', 'Dash', 'Satoshi'),
 (8, 'PPC', 'Peercoin', 'Satoshi'),
-(9, 'XPM', 'Primecoin', 'Satoshi');
+(9, 'XPM', 'Primecoin', 'Satoshi'),
+(10, 'BTX', 'BitCore', 'Satoshi');
 
 -- --------------------------------------------------------
 
@@ -165,7 +166,10 @@ INSERT INTO `param` (`ID`, `Nom`, `Valeur`) VALUES
 (16, 'param_geetest_captcha_id', 'Captcha ID Geetest'),
 (17, 'param_geetest_private_key', 'Private_key Geetest'),
 (18, 'param_IPHub', 'Key API IPHub.info'),
-(19, 'param_IPHub_enable', '0');
+(19, 'param_IPHub_enable', '0'),
+(20, 'param_payouts_enable', '0'),
+(21, 'param_list_claim_enable', '0'),
+(22, 'param_payouts_nb', '5');
 
 -- --------------------------------------------------------
 
@@ -336,7 +340,7 @@ ALTER TABLE `monnaies`
 -- AUTO_INCREMENT pour la table `param`
 --
 ALTER TABLE `param`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT pour la table `pub`
 --

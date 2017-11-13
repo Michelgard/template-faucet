@@ -19,7 +19,7 @@
         
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 centrage textecss">Claim  <?= $param_valeur; ?> 
-                <?php echo $this->monnaie_model->get_monnaie_nom($param_monnaie)['Cent']  ?> every
+                <?=$param_monnaie_cent?> every
             <?= $param_temps; ?> minutes</div>
         </div>
         
@@ -58,15 +58,7 @@
         
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 centrage">
-                <?php 
-                echo form_label('Earn ' . $param_referal . '% referral commission'); 
-                echo '<br/>';
-                if($walletCookie == ''){
-                    echo form_input(array('name'=>'referal','value'=>$param_URL . '/Your_Address','class'=>'referal', 'placeholder'=>'', 'readonly'=>'true'));
-                }else{
-                    echo form_input(array('name'=>'referal','value'=>$param_URL . '/' . $walletCookie,'class'=>'referal', 'placeholder'=>'', 'readonly'=>'true'));
-                }
-                ?>
+                <?=$referalHTML?>
             </div>
         </div>
         

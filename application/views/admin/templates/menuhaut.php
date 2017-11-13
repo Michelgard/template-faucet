@@ -19,7 +19,7 @@
                         </li>
                         <li>
                             <a href="https://www.blog-de-michel.fr" target="_blanck" class="dropdown-toggle" >
-                                Faucet CMS V0.6.2.1 by BlogdeMichel
+                                Faucet CMS V0.6.5.0 by BlogdeMichel
                             </a>
                         </li>
                     </ul>

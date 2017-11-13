@@ -33,10 +33,7 @@ div span.droite {
                </center> 
         </div>
 
-
-
 <div class="col-lg-6">
-    
     
     <div class="container-fluid">
         
@@ -56,7 +53,7 @@ div span.droite {
         
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 centrage textecss">Claim  <?= $param_valeur; ?> 
-                <?php echo $this->monnaie_model->get_monnaie_nom($param_monnaie)['Cent']  ?> every
+                <?=$param_monnaie_cent?> every
             <?= $param_temps; ?> minutes</div>
         </div>
         
@@ -104,6 +101,26 @@ div span.droite {
                     echo form_input(array('name'=>'referal','value'=>$param_URL . '/Your_Address','class'=>'referal', 'placeholder'=>'', 'readonly'=>'true'));
                
                 ?>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Display list of payouts</h3>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <?= form_checkbox(array('class'=>'listpayout', 'name'=>'param_payouts_enable', 'value'=>1, 'checked'=>$param_payouts_enable));?>
+                    <div class="form-group">
+                        <?=form_label('Number of displayed payment', 'param_payouts_nb');?>
+                        <?= form_input(array('type'=>'number', 'name'=>'param_payouts_nb', 'class'=>'form-control', 'value'=>$param_payouts_nb, 
+                            'min'=>'1', 'max'=>'10', 'style'=>'width:55px; height:20px; border-radius: 10px;'))?>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="col-lg-6">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Claim number display</h3>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <?= form_checkbox(array('class'=>'listclaim', 'name'=>'param_list_claim_enable', 'value'=>1, 'checked'=>$param_list_claim_enable));?>         
+                </div>
             </div>
         </div>
         

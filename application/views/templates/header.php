@@ -1,6 +1,5 @@
 <html>
 	<head>
-        
         <link rel="stylesheet" href="<?= css_url($param_theme) ?>">
         <link rel="stylesheet" href="<?= css_url('style') ?>">
        
@@ -8,6 +7,9 @@
         <script type="text/javascript" src="http://api.solvemedia.com/papi/challenge.ajax"></script>
         
         <link rel="shortcut icon" href="<?=img_url('logo-icone.ico') ?>" type="images/x-icon" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        <link href="<?=css_url('AdminLTE.min')?>" rel="stylesheet"/>
         
         <title><?= $title ?></title>
         

@@ -83,9 +83,7 @@
                   </div>
                 </div>
         </div>
-        </div>
-        
-            
+        </div>  
         <div class="row">
             <div class="col-md-6">
                 <div class="box box-widget">
@@ -112,9 +110,10 @@
                     </div>
                 </div>
             </div>
-        </div>
-            
-            
+            <div class="col-md-6">
+                <canvas id="graphique" ></canvas>
+            </div>
+        </div>          
         </div>
     </div>
 </div>

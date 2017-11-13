@@ -335,7 +335,7 @@ ALTER TABLE `javascript`
 -- AUTO_INCREMENT pour la table `monnaies`
 --
 ALTER TABLE `monnaies`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT pour la table `param`
 --

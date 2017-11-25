@@ -242,6 +242,24 @@ CREATE TABLE `users` (
   `Referal` varchar(255) COLLATE utf8_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `version`
+--
+
+CREATE TABLE `version` (
+  `ID` int(11) NOT NULL,
+  `valeur` varchar(255) COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Déchargement des données de la table `version`
+--
+
+INSERT INTO `version` (`ID`, `valeur`) VALUES
+(1, 'V 0.8.6.0');
+
 --
 -- Index pour les tables déchargées
 --
@@ -306,6 +324,13 @@ ALTER TABLE `texte`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`ID`);
+  
+--
+-- Index pour la table `version`
+--
+ALTER TABLE `version`
+  ADD PRIMARY KEY (`ID`);
+
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
@@ -356,6 +381,12 @@ ALTER TABLE `texte`
 --
 ALTER TABLE `users`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;COMMIT;
+  
+--
+-- AUTO_INCREMENT pour la table `version`
+--
+ALTER TABLE `version`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

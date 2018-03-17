@@ -71,6 +71,19 @@
                             </div>
                         </div>
                     </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Security against VPN / Proxy / TOR IP</h3>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <?= form_checkbox(array('class'=>'param_IPHub_enable', 'name'=>'param_IPHub_enable', 'value'=>1, 'checked'=>$param_IPHub_enable));?>
+                       
+                        </div>
+                        <div class="box-body">
+                            <div class="form-group">
+                                <?=form_label('IPHub.info API key', 'param_IPHub');?><br/>
+                                <?= form_input(array('id'=>'param_IPHub', 'name'=>'param_IPHub', 'class'=>'form-control', 'value'=>$param_IPHub, 'style'=>'border-radius: 10px;'))?>
+                            </div> 
+                        </div>
+                    </div>
                 </div>
 
                 <div class="col-md-6">
@@ -121,33 +134,56 @@
                     </div>
                      <div class="box box-primary">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Captcha Geetest</h3>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <?= form_checkbox(array('class'=>'geetest', 'name'=>'param_geetest_enable', 'value'=>1, 'checked'=>$param_geetest_enable));?>
+                            <h3 class="box-title">Short link Shorte.st</h3>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <?= form_checkbox(array('class'=>'shorte', 'name'=>'param_Shorte_enable', 'value'=>1, 'checked'=>$param_Shorte_enable));?>
                         </div>
                         <div class="box-body">
                             <div class="form-group">
-                                <?=form_label('Geetest captcha ID', 'param_geetest_captcha_id');?><br/>
-                                <?= form_input(array('id'=>'param_geetest_captcha_id', 'name'=>'param_geetest_captcha_id', 'class'=>'form-control',
-                                    'value'=>$param_geetest_captcha_id, 'style'=>'border-radius: 10px;'))?>
+                                <?=form_label('Shorte.st  API Key', 'param_Shorte_API');?><br/>
+                                <?= form_input(array('id'=>'param_Shorte_API', 'name'=>'param_Shorte_API', 'class'=>'form-control',
+                                    'value'=>$param_Shorte_API, 'style'=>'border-radius: 10px;'))?>
                             </div>
                             <div class="form-group">
-                                <?=form_label('Geetest Private Key)', 'param_geetest_private_key');?><br/>
-                                <?= form_input(array('id'=>'param_geetest_private_key', 'name'=>'param_geetest_private_key', 'class'=>'form-control',
-                                    'value'=>$param_geetest_private_key, 'style'=>'border-radius: 10px;'))?>
+                                <?=form_label('Shorte.st Gain value)', 'param_Shorte_Valeur');?><br/>
+                                <?= form_input(array('id'=>'param_Shorte_Valeur', 'name'=>'param_Shorte_Valeur', 'class'=>'form-control',
+                                    'value'=>$param_Shorte_Valeur, 'style'=>'border-radius: 10px;', 'type'=>'number', 'min'=>'1'))?>
                             </div>
                         </div>
                     </div>
                     <div class="box box-primary">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Security against VPN / Proxy / TOR IP</h3>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <?= form_checkbox(array('class'=>'param_IPHub_enable', 'name'=>'param_IPHub_enable', 'value'=>1, 'checked'=>$param_IPHub_enable));?>
-                       
+                            <h3 class="box-title">Short link Coin.mg</h3>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <?= form_checkbox(array('class'=>'coin', 'name'=>'param_Coin_enable', 'value'=>1, 'checked'=>$param_Coin_enable));?>
                         </div>
                         <div class="box-body">
                             <div class="form-group">
-                                <?=form_label('IPHub.info API key', 'param_IPHub');?><br/>
-                                <?= form_input(array('id'=>'param_IPHub', 'name'=>'param_IPHub', 'class'=>'form-control', 'value'=>$param_IPHub, 'style'=>'border-radius: 10px;'))?>
-                            </div> 
+                                <?=form_label('Coin.mg  API Key', 'param_Coin_API');?><br/>
+                                <?= form_input(array('id'=>'param_Coin_API', 'name'=>'param_Coin_API', 'class'=>'form-control',
+                                    'value'=>$param_Coin_API, 'style'=>'border-radius: 10px;'))?>
+                            </div>
+                            <div class="form-group">
+                                <?=form_label('Coin.mg Gain value)', 'param_Coin_Valeur');?><br/>
+                                <?= form_input(array('id'=>'param_Coin_Valeur', 'name'=>'param_Coin_Valeur', 'class'=>'form-control',
+                                    'value'=>$param_Coin_Valeur, 'style'=>'border-radius: 10px;', 'type'=>'number', 'min'=>'1'))?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Short link Btc.ms</h3>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <?= form_checkbox(array('class'=>'btc', 'name'=>'param_BTC_enable', 'value'=>1, 'checked'=>$param_BTC_enable));?>
+                        </div>
+                        <div class="box-body">
+                            <div class="form-group">
+                                <?=form_label('Btc.ms  API Key', 'param_BTC_API');?><br/>
+                                <?= form_input(array('id'=>'param_BTC_API', 'name'=>'param_BTC_API', 'class'=>'form-control',
+                                    'value'=>$param_BTC_API, 'style'=>'border-radius: 10px;'))?>
+                            </div>
+                            <div class="form-group">
+                                <?=form_label('BTC.ms Gain value)', 'param_BTC_Valeur');?><br/>
+                                <?= form_input(array('id'=>'param_BTC_Valeur', 'name'=>'param_BTC_Valeur', 'class'=>'form-control',
+                                    'value'=>$param_BTC_Valeur, 'style'=>'border-radius: 10px;', 'type'=>'number', 'min'=>'1'))?>
+                            </div>
                         </div>
                     </div>
                 </div>

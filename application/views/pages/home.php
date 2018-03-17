@@ -20,7 +20,17 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 centrage textecss">Claim  <?= $param_valeur; ?> 
                 <?=$param_monnaie_cent?> every
-            <?= $param_temps; ?> minutes</div>
+            <?= $param_temps; ?> <?= $minutes; ?></div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 centrage textecss"><?= $lien1; ?> </div>
+        </div>
+         <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 centrage textecss"><?= $lien2; ?> </div>
+        </div>
+         <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 centrage textecss"><?= $lien3; ?> </div>
         </div>
         
         <div class="row">

@@ -192,13 +192,13 @@ INSERT INTO `param` (`ID`, `Nom`, `Valeur`) VALUES
 (20, 'param_payouts_enable', '0'),
 (21, 'param_list_claim_enable', '0'),
 (22, 'param_payouts_nb', '5'),
-(23, ' param_Shorte_enable', '0'),
+(23, 'param_Shorte_enable', '0'),
 (24, 'param_Shorte_API', 'Valeur API Shorte'),
 (25, 'param_Shorte_Valeur', '0'),
-(26, ' param_Coin_enable', '0'),
+(26, 'param_Coin_enable', '0'),
 (27, 'param_Coin_API', 'Valeur API Coin.mg'),
 (28, 'param_Coin_Valeur', '0'),
-(29, ' param_BTC_enable', '0'),
+(29, 'param_BTC_enable', '0'),
 (30, 'param_BTC_API', 'Valeur API BTC.ms'),
 (31, 'param_BTC_Valeur', '0');
 

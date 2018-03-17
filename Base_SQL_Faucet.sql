@@ -19,8 +19,29 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `Base_Codel`
+-- Structure de la table `liens`
 --
+
+CREATE TABLE `liens` (
+  `Liens_ID` int(11) NOT NULL,
+  `Liens_Affil` text COLLATE utf8_bin NOT NULL,
+  `Liens_Code` text COLLATE utf8_bin NOT NULL,
+  `Liens_Court` text COLLATE utf8_bin NOT NULL,
+  `Liens_Gain` int(11) NOT NULL,
+  `Liens_Editeur` VARCHAR(255) NOT NULL,
+  `Liens_Retour` tinyint(1) NOT NULL,
+  `Liens_Utilise` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- Index pour la table `liens`
+--
+ALTER TABLE `liens`
+  ADD PRIMARY KEY (`Liens_ID`);
+
+-- AUTO_INCREMENT pour la table `liens`
+--
+ALTER TABLE `liens`
+  MODIFY `Liens_ID` int(11) NOT NULL AUTO_INCREMENT;
 
 -- --------------------------------------------------------
 
@@ -129,7 +150,8 @@ INSERT INTO `monnaies` (`ID`, `Nom`, `Nom_Complet`, `Cent`) VALUES
 (7, 'DASH', 'Dash', 'Satoshi'),
 (8, 'PPC', 'Peercoin', 'Satoshi'),
 (9, 'XPM', 'Primecoin', 'Satoshi'),
-(10, 'BTX', 'BitCore', 'Satoshi');
+(10, 'BTX', 'BitCore', 'Satoshi'),
+(11, 'POT', 'Potcoin', 'Satoshi');
 
 -- --------------------------------------------------------
 
@@ -169,7 +191,16 @@ INSERT INTO `param` (`ID`, `Nom`, `Valeur`) VALUES
 (19, 'param_IPHub_enable', '0'),
 (20, 'param_payouts_enable', '0'),
 (21, 'param_list_claim_enable', '0'),
-(22, 'param_payouts_nb', '5');
+(22, 'param_payouts_nb', '5'),
+(23, ' param_Shorte_enable', '0'),
+(24, 'param_Shorte_API', 'Valeur API Shorte'),
+(25, 'param_Shorte_Valeur', '0'),
+(26, ' param_Coin_enable', '0'),
+(27, 'param_Coin_API', 'Valeur API Coin.mg'),
+(28, 'param_Coin_Valeur', '0'),
+(29, ' param_BTC_enable', '0'),
+(30, 'param_BTC_API', 'Valeur API BTC.ms'),
+(31, 'param_BTC_Valeur', '0');
 
 -- --------------------------------------------------------
 
@@ -258,7 +289,7 @@ CREATE TABLE `version` (
 --
 
 INSERT INTO `version` (`ID`, `valeur`) VALUES
-(1, 'V 0.8.6.0');
+(1, 'V 0.9.0.0');
 
 --
 -- Index pour les tables déchargées

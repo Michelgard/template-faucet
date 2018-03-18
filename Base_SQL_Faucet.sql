@@ -141,17 +141,17 @@ CREATE TABLE `monnaies` (
 --
 
 INSERT INTO `monnaies` (`ID`, `Nom`, `Nom_Complet`, `Cent`) VALUES
-(1, 'BTC', 'Bitcoin', 'Satoshi'),
-(2, 'ETH', 'Ethereum', 'Satoshi'),
-(3, 'LTC', 'Litecoin', 'Satoshi'),
-(4, 'DOGE', 'Dogecoin', 'Satoshi'),
-(5, 'BCH', 'Bitcoin Cash', 'Satoshi'),
-(6, 'BLK', 'Blackcoin', 'Satoshi'),
-(7, 'DASH', 'Dash', 'Satoshi'),
-(8, 'PPC', 'Peercoin', 'Satoshi'),
-(9, 'XPM', 'Primecoin', 'Satoshi'),
-(10, 'BTX', 'BitCore', 'Satoshi'),
-(11, 'POT', 'Potcoin', 'Satoshi');
+(1, 'BTC', 'Bitcoin', 'Satoshis'),
+(2, 'ETH', 'Ethereum', 'Satoshis'),
+(3, 'LTC', 'Litecoin', 'Satoshis'),
+(4, 'DOGE', 'Dogecoin', 'Satoshis'),
+(5, 'BCH', 'Bitcoin Cash', 'Satoshis'),
+(6, 'BLK', 'Blackcoin', 'Satoshis'),
+(7, 'DASH', 'Dash', 'Satoshis'),
+(8, 'PPC', 'Peercoin', 'Satoshis'),
+(9, 'XPM', 'Primecoin', 'Satoshis'),
+(10, 'BTX', 'BitCore', 'Satoshis'),
+(11, 'POT', 'Potcoin', 'Satoshis');
 
 -- --------------------------------------------------------
 
@@ -289,7 +289,7 @@ CREATE TABLE `version` (
 --
 
 INSERT INTO `version` (`ID`, `valeur`) VALUES
-(1, 'V 0.9.0.0');
+(1, 'V 0.9.0.1');
 
 --
 -- Index pour les tables déchargées

@@ -24,7 +24,7 @@
                 <li class="<?=$active7?>">
                     <a href="<?=$param_URL . '/admin/sittings'?>">
                         <i class="fa fa-gears"></i>
-                        <p>Sittings</p>
+                        <p>Settings</p>
                     </a>
                 </li>
                 <li class="<?=$active2?>">

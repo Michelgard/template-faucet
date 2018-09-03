@@ -143,7 +143,7 @@ CREATE TABLE `monnaies` (
 INSERT INTO `monnaies` (`ID`, `Nom`, `Nom_Complet`, `Cent`) VALUES
 (1, 'BTC', 'Bitcoin', 'Satoshis'),
 (2, 'ETH', 'Ethereum', 'Satoshis'),
-(3, 'LTC', 'Litecoin', 'Satoshis'),
+(3, 'LTC', 'Litecoin', 'Litoshis'),
 (4, 'DOGE', 'Dogecoin', 'Satoshis'),
 (5, 'BCH', 'Bitcoin Cash', 'Satoshis'),
 (6, 'BLK', 'Blackcoin', 'Satoshis'),
@@ -152,6 +152,9 @@ INSERT INTO `monnaies` (`ID`, `Nom`, `Nom_Complet`, `Cent`) VALUES
 (9, 'XPM', 'Primecoin', 'Satoshis'),
 (10, 'BTX', 'BitCore', 'Satoshis'),
 (11, 'POT', 'Potcoin', 'Satoshis');
+(12, 'XMR', 'Monero', 'Satoshis');
+(13, 'ZEC', 'ZCASH', 'Satoshis');
+(14, 'DGB', 'DigiByte', 'Satoshis');
 
 -- --------------------------------------------------------
 
@@ -289,7 +292,7 @@ CREATE TABLE `version` (
 --
 
 INSERT INTO `version` (`ID`, `valeur`) VALUES
-(1, 'V 0.9.1.0');
+(1, 'V 0.9.5.1');
 
 --
 -- Index pour les tables déchargées
@@ -391,7 +394,7 @@ ALTER TABLE `javascript`
 -- AUTO_INCREMENT pour la table `monnaies`
 --
 ALTER TABLE `monnaies`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT pour la table `param`
 --

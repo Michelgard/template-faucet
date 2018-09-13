@@ -6,7 +6,7 @@
                            <a href="https://www.blog-de-michel.fr" target="_blanck" class="dropdown-toggle">
                                 Faucet CMS <?=$version?> by BlogdeMichel
                             </a>
-                        Copyright © LeFaucetBtc.fr 2017
+                        Copyright © BlogdeMichel 2018
 
                     
                 </p>

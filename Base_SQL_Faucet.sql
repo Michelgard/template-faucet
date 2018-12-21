@@ -151,9 +151,9 @@ INSERT INTO `monnaies` (`ID`, `Nom`, `Nom_Complet`, `Cent`) VALUES
 (8, 'PPC', 'Peercoin', 'Satoshis'),
 (9, 'XPM', 'Primecoin', 'Satoshis'),
 (10, 'BTX', 'BitCore', 'Satoshis'),
-(11, 'POT', 'Potcoin', 'Satoshis');
-(12, 'XMR', 'Monero', 'Satoshis');
-(13, 'ZEC', 'ZCASH', 'Satoshis');
+(11, 'POT', 'Potcoin', 'Satoshis'),
+(12, 'XMR', 'Monero', 'Satoshis'),
+(13, 'ZEC', 'ZCASH', 'Satoshis'),
 (14, 'DGB', 'DigiByte', 'Satoshis');
 
 -- --------------------------------------------------------

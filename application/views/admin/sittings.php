@@ -152,17 +152,17 @@
                     </div>
                     <div class="box box-primary">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Short link Coin.mg</h3>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h3 class="box-title">Short link Vivads.net</h3>&nbsp;&nbsp;&nbsp;&nbsp;
                             <?= form_checkbox(array('class'=>'coin', 'name'=>'param_Coin_enable', 'value'=>1, 'checked'=>$param_Coin_enable));?>
                         </div>
                         <div class="box-body">
                             <div class="form-group">
-                                <?=form_label('Coin.mg  API Key', 'param_Coin_API');?><br/>
+                                <?=form_label('Vivads.net  API Key', 'param_Coin_API');?><br/>
                                 <?= form_input(array('id'=>'param_Coin_API', 'name'=>'param_Coin_API', 'class'=>'form-control',
                                     'value'=>$param_Coin_API, 'style'=>'border-radius: 10px;'))?>
                             </div>
                             <div class="form-group">
-                                <?=form_label('Coin.mg Gain value)', 'param_Coin_Valeur');?><br/>
+                                <?=form_label('Vivads.net Gain value)', 'param_Coin_Valeur');?><br/>
                                 <?= form_input(array('id'=>'param_Coin_Valeur', 'name'=>'param_Coin_Valeur', 'class'=>'form-control',
                                     'value'=>$param_Coin_Valeur, 'style'=>'border-radius: 10px;', 'type'=>'number', 'min'=>'1'))?>
                             </div>
@@ -170,17 +170,17 @@
                     </div>
                     <div class="box box-primary">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Short link Btc.ms</h3>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <h3 class="box-title">Short link Clicksfly.com</h3>&nbsp;&nbsp;&nbsp;&nbsp;
                             <?= form_checkbox(array('class'=>'btc', 'name'=>'param_BTC_enable', 'value'=>1, 'checked'=>$param_BTC_enable));?>
                         </div>
-                        <div class="box-body">
+                        <div class="box-body"> 
                             <div class="form-group">
-                                <?=form_label('Btc.ms  API Key', 'param_BTC_API');?><br/>
+                                <?=form_label('Clicksfly.com  API Key', 'param_BTC_API');?><br/>
                                 <?= form_input(array('id'=>'param_BTC_API', 'name'=>'param_BTC_API', 'class'=>'form-control',
-                                    'value'=>$param_BTC_API, 'style'=>'border-radius: 10px;'))?>
+                                    'value'=>$param_BTC_API, 'style'=>'border-radius: 10px;'))?> 
                             </div>
                             <div class="form-group">
-                                <?=form_label('BTC.ms Gain value)', 'param_BTC_Valeur');?><br/>
+                                <?=form_label('Clicksfly.com Gain value)', 'param_BTC_Valeur');?><br/>
                                 <?= form_input(array('id'=>'param_BTC_Valeur', 'name'=>'param_BTC_Valeur', 'class'=>'form-control',
                                     'value'=>$param_BTC_Valeur, 'style'=>'border-radius: 10px;', 'type'=>'number', 'min'=>'1'))?>
                             </div>

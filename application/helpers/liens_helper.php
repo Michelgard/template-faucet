@@ -19,7 +19,7 @@ if (!function_exists('BTC')){
         
         $long_url = base_url() .  $codeLien;
         $api_token = $Api;
-        $api_url = "https://clicksfly.com/api/?api={$api_token}&url={$long_url}&alias=CustomAlias";
+        $api_url = "https://clicksfly.com/api/?api={$api_token}&url={$long_url}";
         $options=array(
           CURLOPT_URL            => $api_url, // Url cible (l'url la page que vous voulez télécharger)
           CURLOPT_RETURNTRANSFER => true, // Retourner le contenu téléchargé dans une chaine (au lieu de l'afficher directement)

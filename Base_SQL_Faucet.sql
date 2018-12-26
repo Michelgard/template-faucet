@@ -292,7 +292,7 @@ CREATE TABLE `version` (
 --
 
 INSERT INTO `version` (`ID`, `valeur`) VALUES
-(1, 'V 0.9.5.1');
+(1, 'V 1.0.0.4');
 
 --
 -- Index pour les tables déchargées
